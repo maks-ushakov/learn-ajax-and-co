@@ -28,8 +28,27 @@
 				<h1>Test static server</h1>
 			</header>
 			<main id="main">
-				<!--#include virtual="script.js" -->
 			</main>
 		</div>
+		<script>
+			var doc = document.createElement('div');
+			var target = document.getElementById('main');
+
+			if(document.location.hostname === 'localhost') {
+				doc.setAttribute('class', 'success');
+				doc.innerHTML = "<h2>Congratulation!!!</h2>\
+				<p>Local Static Server is running</p>\
+				<p>Now you can do some interesting things.</p>";
+			} else {
+				doc.setAttribute('class', 'error');
+				doc.innerHTML = "<h2>Warning!!!</h2>\
+				<p>Local Static Server isn't running or you open index.html file directly.</p>\
+				<p>Try to run it, type follow command in console:</p>\
+				<code>node server.js</code>\
+				<p>If can not run, check and install <em>node</em>,\
+				<em>npm</em>, <em>node-static</em></p>";
+			}
+			target.appendChild(doc);
+		</script>
 	</body>
 </html>
