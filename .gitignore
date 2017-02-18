@@ -1,1 +1,7 @@
-npm_modules/
+#Ignore temporary and swap files
+*.swp
+*~
+
+
+#Ignore files inside directory
+node_modules/
