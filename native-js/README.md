@@ -6,3 +6,7 @@ It has used only native JavaScript language.
   
 ##How to Use
 run server.js for each example/exercise
+
+```
+node server.js
+```
